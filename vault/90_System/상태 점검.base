@@ -1,0 +1,29 @@
+filters:
+  and:
+    - "file.inFolder(\"10_Projects\")"
+    - "type == \"project\""
+    - "review_state == \"확인 필요\" || !note_reviewed || date(note_reviewed) < today() - \"14d\""
+properties:
+  file.name:
+    displayName: "프로젝트"
+  next_action:
+    displayName: "다음 행동"
+  workflow_state:
+    displayName: "작업 상태"
+  next_source:
+    displayName: "근거"
+  note_reviewed:
+    displayName: "기록 검토일"
+views:
+  - type: table
+    name: 상태 점검
+    order:
+      - file.name
+      - next_action
+      - workflow_state
+      - next_source
+      - note_reviewed
+    sort:
+      - property: file.name
+        direction: ASC
+    limit: 30

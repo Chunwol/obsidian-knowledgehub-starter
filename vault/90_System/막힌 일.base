@@ -1,0 +1,26 @@
+filters:
+  and:
+    - "file.inFolder(\"10_Projects\")"
+    - "type == \"project\""
+    - "blocker && blocker != \"\""
+properties:
+  file.name:
+    displayName: "프로젝트"
+  blocker:
+    displayName: "막힌 이유"
+  workflow_state:
+    displayName: "작업 상태"
+  next_action:
+    displayName: "다음 확인"
+views:
+  - type: table
+    name: 막힌 일
+    order:
+      - file.name
+      - blocker
+      - workflow_state
+      - next_action
+    sort:
+      - property: file.name
+        direction: ASC
+    limit: 15

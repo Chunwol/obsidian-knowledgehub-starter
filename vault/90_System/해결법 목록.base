@@ -1,0 +1,22 @@
+filters:
+  and:
+    - "file.inFolder(\"30_Resources/Playbooks\")"
+    - "type == \"playbook\""
+properties:
+  file.name:
+    displayName: "해결법"
+  symptom:
+    displayName: "증상"
+  evidence_scope:
+    displayName: "검증 범위"
+views:
+  - type: table
+    name: 해결법
+    order:
+      - file.name
+      - symptom
+      - evidence_scope
+    sort:
+      - property: file.name
+        direction: ASC
+    limit: 12

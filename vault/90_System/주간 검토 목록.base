@@ -1,0 +1,22 @@
+filters:
+  and:
+    - "file.inFolder(\"90_System/주간 검토\")"
+    - "type == \"weekly-review\""
+properties:
+  file.name:
+    displayName: "주간 검토"
+  review_state:
+    displayName: "검토 상태"
+  updated:
+    displayName: "수정일"
+views:
+  - type: table
+    name: 주간 검토
+    order:
+      - file.name
+      - review_state
+      - updated
+    sort:
+      - property: file.name
+        direction: DESC
+    limit: 12

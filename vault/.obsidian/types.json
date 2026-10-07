@@ -1,0 +1,19 @@
+{
+  "types": {
+    "type": "text",
+    "project_id": "text",
+    "project": "text",
+    "status": "text",
+    "workflow_state": "text",
+    "next_action": "text",
+    "blocker": "text",
+    "next_source": "text",
+    "review_state": "text",
+    "symptom": "text",
+    "evidence_scope": "text",
+    "created": "date",
+    "updated": "date",
+    "note_reviewed": "date",
+    "last_verified": "date"
+  }
+}

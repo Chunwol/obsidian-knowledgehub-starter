@@ -17,11 +17,21 @@
 | Inbox와 하루 기록 | 프로젝트·세션·결정 템플릿 | AI 시작 지침과 공유용 내보내기 |
 | 먼저 적고 나중에 분류 | 결과와 근거를 함께 기록 | 사용자가 고른 노트만 직접 첨부 |
 
+## v1.1.0 — 기록에서 다음 행동으로
+
+- **홈 대시보드:** 이어할 일, 막힌 일, 오래된 상태, 해결법, 주간 검토.
+- **작업 종료 흐름:** 세션과 프로젝트 요약을 함께 갱신하는 체크리스트.
+- **해결법 템플릿:** 증상·적용 조건·실패·검증 근거를 남기는 재사용 기록.
+- **주간 검토:** 최대 세 프로젝트를 골라 다음 행동과 보류 사유를 정리.
+- **근거 구분:** 기록 검토일과 실제 검증일을 분리.
+
+개인 프로젝트·운영 자료 없이 가상의 예시 프로젝트로 시작합니다. 새로 추가된 빈 해결법·주간 검토 목록은 직접 노트를 만들면 채워집니다.
+
 ## 3단계로 시작하기
 
 ### 1. 다운로드
 
-[최신 Release](https://github.com/Chunwol/obsidian-knowledgehub-starter/releases/latest)에서 `knowledgehub-starter-v1.0.0.zip`을 받아 **전체 압축을 풉니다**.
+[최신 Release](https://github.com/Chunwol/obsidian-knowledgehub-starter/releases/latest)에서 `knowledgehub-starter-v1.1.0.zip`을 받아 **전체 압축을 풉니다**.
 또는 상단 **Use this template**으로 자기 저장소를 만든 뒤 복제합니다.
 
 ### 2. 자동 세팅
@@ -73,7 +83,7 @@ KnowledgeHub/
 ├── 60_Sessions/       작업 결과와 근거
 ├── 65_Conversations/  직접 보관하는 대화
 ├── 70_Decisions/      선택과 이유
-├── 80_Templates/      6종 문서 템플릿
+├── 80_Templates/      8종 문서 템플릿
 ├── 90_System/         안내·Bases·Python 도구
 └── 99_Attachments/    이미지와 PDF
 ```
@@ -105,6 +115,17 @@ python 90_System/tools/knowledge.py backup --output "../knowledgehub-backup.zip"
 
 기본 기능만으로 시작할 수 있습니다. 홈 자동 열기, 관련 노트 제안, 표 편집은 [선택 플러그인 안내](docs/plugins.md)를 참고하세요.
 커뮤니티 플러그인 설치와 활성화, 계정·모델 설정은 사용자가 직접 합니다.
+
+## 기존 v1.0.0 사용자가 업데이트하려면
+
+새 ZIP을 별도 폴더에 풉니다. 먼저 기존 보관함을 백업한 뒤, 새 `vault/90_System`의 안내와 `.base` 파일,
+`주간 검토 템플릿.md`·`해결법 템플릿.md`를 필요한 위치로 복사하세요.
+기존 홈·프로젝트·세션·일일 템플릿은 새 예시와 비교해 필요한 부분을 추가하고, 사용자 내용을 덮어쓰지 마세요.
+`AI_START.md`의 작업 종료 안내도 기존 지침에 합칩니다.
+새 속성의 자료형은 Obsidian에서 지정하거나 `vault/.obsidian/types.json`을 참고해 기존 설정에 합치세요.
+프로젝트의 다음 행동 속성은 `vault/90_System/작업 시작과 종료.md`를 참고해 채웁니다.
+
+`setup.ps1`은 새 설치 전용이며 기존 보관함의 자동 업그레이드에는 사용하지 않습니다.
 
 ## 문제 해결
 
