@@ -1,0 +1,10 @@
+{
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00_Inbox",
+  "attachmentFolderPath": "99_Attachments",
+  "showInlineTitle": false,
+  "readableLineLength": true,
+  "livePreview": true,
+  "promptDelete": true
+}

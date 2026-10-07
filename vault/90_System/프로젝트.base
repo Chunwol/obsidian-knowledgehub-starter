@@ -1,0 +1,10 @@
+filters:
+  and:
+    - 'type == "project"'
+views:
+  - type: table
+    name: 프로젝트
+    order:
+      - file.name
+      - project_id
+      - status
